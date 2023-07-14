@@ -1,8 +1,9 @@
 const fs = require('fs');
+const { existFile } = require('./ExistFile');
 
 async function getJSONFile(filePath) {
     try{
-        // const content = fs.readFileSync(filePath, 'utf-8');
+        await existFile(filePath);
         const content = await fs.promises.readFile(filePath, 'utf-8');
 
         if (content != ""){

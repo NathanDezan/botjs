@@ -4,6 +4,8 @@ const { SplitMessage } = require('./services/utils/SplitMessage.js');
 const { adminCommand } = require('./services/commands/AdminCommand.js');
 const { Message } = require('./schema/Message.js');
 
+require('dotenv').config()
+
 const client = new Client({
     authStrategy: new LocalAuth({ clientId: "client-one" })
 });
